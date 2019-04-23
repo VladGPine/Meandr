@@ -1,0 +1,25 @@
+.header {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  @font-face {
+    font-family: 'DIN Pro';
+    src: url('../fonts/dinpro-regular.otf');
+  }
+  
+
+  &__title {
+    color: #222222;
+    font-family: 'DIN Pro', sans-serif;
+    font-weight: 200;
+    font-size: 48px;
+    letter-spacing: -0.02em;
+  }
+  &__description {
+    &--orange {
+      color: #F47821;
+    }
+  }
+}
