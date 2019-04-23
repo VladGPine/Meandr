@@ -1,12 +1,42 @@
+/* styles reset */
+
+@import "node_modules/normalize.less/normalize.less";
+
 /* fonts */
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
 @font-face {
-  font-family: 'DIN Pro';
-  src: url('../fonts/dinpro-regular.otf');
+	font-family: 'DIN Pro';
+	src: url('DINPro-Light.eot');
+	src: local('DIN Pro Light'), local('DINPro-Light'),
+		url('DINPro-Light.eot?#iefix') format('embedded-opentype'),
+		url('DINPro-Light.woff') format('woff'),
+		url('DINPro-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
 }
+@font-face {
+  font-family: 'Gilroy';
+  src: url('Gilroy-SemiBold.eot');
+  src: local('Gilroy SemiBold'), local('Gilroy-SemiBold'),
+      url('Gilroy-SemiBold.eot?#iefix') format('embedded-opentype'),
+      url('Gilroy-SemiBold.woff') format('woff'),
+      url('Gilroy-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* variables */
+
+@import 'variables.less';
 
 /* main content */
 
 @import 'header.less';
+@import 'main-content.less';
 @import 'footer.less';
+
+
+body {
+  max-width: 100%;
+}

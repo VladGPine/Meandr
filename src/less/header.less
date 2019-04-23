@@ -4,17 +4,117 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  background-color: @main-bg-color;
+
+  &__container {
+    width: 100%;
+    margin-top: 165px;
+    margin-bottom: 142px;
+  }
 
   &__title {
-    color: #222222;
+    color: @main-text-color;
     font-family: 'DIN Pro', sans-serif;
     font-weight: 200;
     font-size: 48px;
     letter-spacing: -0.02em;
+    margin: 0;
   }
+
   &__description {
-    &-marked {
-      color: #F47821;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin-top: 24px;
+
+    &--marked {
+      color: @orange;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    margin-top: 48px;
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 1;
+
+    // &::before {
+    //   position: absolute;
+    //   content: '';
+    //   display: inline-block;
+    //   width: 54px;
+    //   height: 54px;
+    //   top: -18px;
+    //   left: -18px;
+    //   background-color: @btn-bg-color;
+    //   border-radius: 50%;
+    //   z-index: -1;
+    // }
+
+    .btn__plus {
+      position: absolute;
+      display: block;
+      width: 54px;
+      height: 54px;
+      top: -17.5px;
+      left: -38px;
+      background-color: @btn-bg-color;
+      margin-bottom: 5px;
+      border-radius: 50%;
+      z-index: -1;
+
+      &::before {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 3px;
+        height: 14px;
+        top: 50%;
+        left: 50%;
+        background-color: @orange;
+        transform: translate(-1px, -6.5px);
+      }
+
+      &::after {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 14px;
+        height: 3px;
+        top: 50%;
+        left: 50%;
+        background-color: @orange;
+        transform: translate(-6.5px, -1px);
+      }
+
+      &:hover {
+        display: inline-block;
+        width: 236px;
+        border-radius: 17.5px;
+      }
+    }
+
+   
+
+    
+    
+  }
+
+  btn {
+    &__plus {
+      display: inline-block;
+      width: 54px;
+      height: 54px;
+      background-color: @btn-bg-color;
+      border-radius: 50%;
+      z-index: -1;
     }
   }
 }

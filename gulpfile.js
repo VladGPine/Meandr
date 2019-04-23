@@ -32,7 +32,7 @@ const watch = (done) => {
     }
   });
   gulp.watch('./src/less/**/*.less', gulp.parallel(styles));
-  gulp.watch('./*.html', browserSync.reload);
+  gulp.watch("./*.html").on('change', browserSync.reload);
   done();
 }
 
