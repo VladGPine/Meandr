@@ -671,6 +671,7 @@ body {
   margin-bottom: 82px;
 }
 .footer .feedback-form__label-description {
+  position: relative;
   max-width: 575px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -682,6 +683,37 @@ body {
   font-size: 16px;
   letter-spacing: -0.01em;
 }
+.footer .feedback-form__label-description::before {
+  position: absolute;
+  left: -54px;
+  color: #f47821;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+}
+.footer .feedback-form__label-description--name::before {
+  content: '1';
+}
+.footer .feedback-form__label-description--email::before {
+  content: '2';
+}
+.footer .feedback-form__label-description--tel::before {
+  content: '3';
+}
+.footer .feedback-form__label-description--question::before {
+  content: '4';
+}
+.footer .feedback-form__label-description:after {
+  position: absolute;
+  content: '';
+  width: 54px;
+  height: 54px;
+  top: -16px;
+  left: -76px;
+  border: 1px solid rgba(255, 255, 255, 0.23);
+  border-radius: 50%;
+}
 .footer .feedback-form__input {
   width: 575px;
   margin-bottom: 60px;
@@ -691,6 +723,7 @@ body {
   margin-top: 24px;
   padding-top: 5px;
   padding-bottom: 12px;
+  outline: none;
 }
 .footer .feedback-form__input::-webkit-input-placeholder {
   font-family: 'Roboto', sans-serif;
@@ -723,6 +756,10 @@ body {
   letter-spacing: -0.01em;
   color: #ffffff;
   opacity: 0.3;
+}
+.footer .feedback-form__textarea {
+  padding-bottom: 42px;
+  resize: none;
 }
 .footer .feedback-form__btn {
   font-family: 'Gilroy', sans-serif;
