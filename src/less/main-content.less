@@ -4,7 +4,6 @@
   flex-direction: column;
   align-items: center;
 
-
   .block-1 {
     max-width: 100%;
     display: flex;
@@ -53,6 +52,108 @@
           font-size: 24px;
           letter-spacing: -0.03em;
           color: @main-text-color;
+        }
+      }
+    }
+  }
+
+  .block-2 {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .article {
+    width: 773px;
+    margin-top: 80px;
+    margin-bottom: 100px;
+    color: @main-text-color;
+
+    &__title {
+      font-family: 'DIN Pro', sans-serif;
+      font-size: 48px;
+      font-weight: normal;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+    }
+
+    &__description {
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+      line-height: 26px;
+      color: @article-color;
+    }
+  }
+
+  .block-3 {
+    max-width: 100%;
+    width: 1440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .benefits {
+    max-width: 100%;
+    background-color: @second-bg-color;
+
+    &__title {
+      font-family: 'DIN Pro', sans-serif;
+      font-size: 40px;
+      font-weight: normal;
+      letter-spacing: -0.02em;
+      color: @benefit-title-color;
+      margin-top: 150px;
+      margin-bottom: 60px;
+    }
+
+    .benefit-list {
+      min-width: 100%; // 1165px
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      margin-top: 0;
+      margin-bottom: 160px;
+
+      .benefit {
+        display: flex;
+        flex-direction: column;
+        background-image: url('../../build/img/benefit.png');
+        background-repeat: no-repeat;
+        background-position: 0 0;
+       
+        &--experience {
+          width: 326px;
+          margin-left: 135px;
+          margin-right: 71px;
+        }
+
+        &--salary {
+          width: 332px;
+          margin-right: 65px;
+        }
+
+        &--flexible {
+          width: 345px;
+        }
+
+        &__line {
+          margin-top: 22px;
+          margin-bottom: 27px;
+        }
+
+        &__title {
+          font-family: 'DIN Pro', sans-serif;
+          font-size: 20px;
+          margin-top: 82px;
+        }
+
+        &__description {
+          overflow: visible;
+          font-family: 'Roboto', sans-serif;
+          font-size: 16px;
+          line-height: 26px;
+          color: @article-color;
         }
       }
     }
