@@ -27,7 +27,7 @@
         width: 486px;
         font-family: 'DIN Pro', sans-serif;
         background-color: @main-bg-color;
-        padding: 50px 66px 61px 60px;
+        padding: 50px 66px 39px 58px;
         border-right: 2px solid @btn-bg-color;
         box-sizing: border-box;
 
@@ -41,17 +41,45 @@
         }
 
         &__title {
+          font-family: 'DIN Pro Bold', sans-serif;
           font-size: 12px;
-          font-weight: 600;
+          font-style: normal;
+          line-height: 12px;
           letter-spacing: 0.04em;
           text-transform: uppercase;
           color: @orange;
+          margin-top: 0;
+          margin-bottom: 18px;
+
+          &:nth-child(2) {
+            letter-spacing: 0.03em;
+          }
         }
 
         &__description {
+          width: 337px;
           font-size: 24px;
+          line-height: 29.99px;
           letter-spacing: -0.03em;
           color: @main-text-color;
+          margin-top: 0;
+          
+        }
+
+        &:nth-child(2) {
+          padding-left: 60px;
+
+          .question__description {
+            width: 356px;
+          }
+        }
+
+        &:last-child {
+          padding-left: 60px;
+
+          .question__description {
+            width: 300px;
+          }
         }
       }
     }
