@@ -619,7 +619,7 @@ body {
   font-weight: normal;
   letter-spacing: -0.02em;
   color: #000000;
-  margin-top: 150px;
+  margin-top: 121px;
   margin-bottom: 60px;
 }
 .content .benefits .benefit-list {
@@ -630,8 +630,8 @@ body {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   list-style: none;
-  margin-top: 0;
-  margin-bottom: 160px;
+  margin-top: 1px;
+  margin-bottom: 148px;
 }
 .content .benefits .benefit-list .benefit {
   display: -webkit-box;
@@ -647,7 +647,7 @@ body {
 }
 .content .benefits .benefit-list .benefit--experience {
   width: 326px;
-  margin-left: 135px;
+  margin-left: 114px;
   margin-right: 71px;
 }
 .content .benefits .benefit-list .benefit--salary {
@@ -657,21 +657,24 @@ body {
 .content .benefits .benefit-list .benefit--flexible {
   width: 345px;
 }
-.content .benefits .benefit-list .benefit__line {
-  margin-top: 22px;
-  margin-bottom: 27px;
-}
 .content .benefits .benefit-list .benefit__title {
-  font-family: 'DIN Pro', sans-serif;
+  font-family: 'DIN Pro Bold', sans-serif;
   font-size: 20px;
-  margin-top: 82px;
+  margin-top: 85px;
+  margin-left: 1px;
+}
+.content .benefits .benefit-list .benefit__line {
+  margin-top: 4px;
+  margin-left: 1px;
+  margin-bottom: 8px;
 }
 .content .benefits .benefit-list .benefit__description {
   overflow: visible;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  line-height: 26px;
+  line-height: 1.68em;
   color: #4e4d53;
+  margin-left: 1px;
 }
 .footer {
   max-width: 100%;
