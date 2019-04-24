@@ -707,15 +707,20 @@ body {
 .footer .feedback-form__label-description:after {
   position: absolute;
   content: '';
-  width: 54px;
-  height: 54px;
-  top: -16px;
-  left: -76px;
+  width: 64px;
+  height: 64px;
+  top: -21px;
+  left: -81px;
   border: 1px solid rgba(255, 255, 255, 0.23);
   border-radius: 50%;
 }
 .footer .feedback-form__input {
   width: 575px;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
   margin-bottom: 60px;
   background: none;
   border: none;
@@ -726,7 +731,6 @@ body {
   outline: none;
 }
 .footer .feedback-form__input::-webkit-input-placeholder {
-  font-family: 'Roboto', sans-serif;
   font-size: 24px;
   line-height: 35px;
   letter-spacing: -0.01em;
@@ -734,7 +738,6 @@ body {
   opacity: 0.3;
 }
 .footer .feedback-form__input:-moz-placeholder {
-  font-family: 'Roboto', sans-serif;
   font-size: 24px;
   line-height: 35px;
   letter-spacing: -0.01em;
@@ -742,7 +745,6 @@ body {
   opacity: 0.3;
 }
 .footer .feedback-form__input::-moz-placeholder {
-  font-family: 'Roboto', sans-serif;
   font-size: 24px;
   line-height: 35px;
   letter-spacing: -0.01em;
@@ -750,7 +752,6 @@ body {
   opacity: 0.3;
 }
 .footer .feedback-form__input:-ms-input-placeholder {
-  font-family: 'Roboto', sans-serif;
   font-size: 24px;
   line-height: 35px;
   letter-spacing: -0.01em;
@@ -777,4 +778,5 @@ body {
   margin-bottom: 120px;
   padding-top: 20px;
   padding-bottom: 16px;
+  outline: none;
 }
