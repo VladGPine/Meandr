@@ -667,6 +667,8 @@ body {
   font-weight: normal;
   line-height: 52px;
   letter-spacing: -0.02em;
+  margin-top: 100px;
+  margin-bottom: 82px;
 }
 .footer .feedback-form__label-description {
   max-width: 575px;
@@ -679,14 +681,48 @@ body {
   flex-direction: column;
   font-size: 16px;
   letter-spacing: -0.01em;
-  margin-bottom: 24px;
 }
 .footer .feedback-form__input {
   width: 575px;
   margin-bottom: 60px;
   background: none;
   border: none;
-  border-bottom: 1px solid #f7f8fa;
+  border-bottom: 1px solid rgba(247, 248, 250, 0.1);
+  margin-top: 24px;
+  padding-top: 5px;
+  padding-bottom: 12px;
+}
+.footer .feedback-form__input::-webkit-input-placeholder {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  line-height: 35px;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+  opacity: 0.3;
+}
+.footer .feedback-form__input:-moz-placeholder {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  line-height: 35px;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+  opacity: 0.3;
+}
+.footer .feedback-form__input::-moz-placeholder {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  line-height: 35px;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+  opacity: 0.3;
+}
+.footer .feedback-form__input:-ms-input-placeholder {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  line-height: 35px;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+  opacity: 0.3;
 }
 .footer .feedback-form__btn {
   font-family: 'Gilroy', sans-serif;
