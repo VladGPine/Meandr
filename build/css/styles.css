@@ -569,8 +569,8 @@ body {
 }
 .content .article {
   width: 773px;
-  margin-top: 80px;
-  margin-bottom: 100px;
+  margin-top: 43px;
+  margin-bottom: 89px;
   color: #222222;
 }
 .content .article__title {
@@ -578,13 +578,22 @@ body {
   font-size: 48px;
   font-weight: normal;
   letter-spacing: -0.02em;
-  margin-bottom: 24px;
+  margin-bottom: 9px;
+  margin-left: 1px;
 }
 .content .article__description {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  line-height: 26px;
   color: #4e4d53;
+  margin-left: 1px;
+}
+.content .article__description:first-of-type {
+  margin-bottom: 28px;
+  line-height: 1.67;
+}
+.content .article__description:last-of-type {
+  margin-top: 0;
+  line-height: 1.65;
 }
 .content .block-3 {
   max-width: 100%;

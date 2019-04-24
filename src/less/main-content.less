@@ -93,8 +93,8 @@
 
   .article {
     width: 773px;
-    margin-top: 80px;
-    margin-bottom: 100px;
+    margin-top: 43px;
+    margin-bottom: 89px;
     color: @main-text-color;
 
     &__title {
@@ -102,15 +102,27 @@
       font-size: 48px;
       font-weight: normal;
       letter-spacing: -0.02em;
-      margin-bottom: 24px;
+      margin-bottom: 9px;
+      margin-left: 1px;
     }
 
     &__description {
       font-family: 'Roboto', sans-serif;
       font-size: 16px;
-      line-height: 26px;
       color: @article-color;
+      margin-left: 1px;
+      
+      &:first-of-type {
+        margin-bottom: 28px;
+        line-height: 1.67;
+      }
+
+      &:last-of-type {
+        margin-top: 0;
+        line-height: 1.65;
+      }
     }
+    
   }
 
   .block-3 {
