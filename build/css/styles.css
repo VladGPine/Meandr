@@ -348,10 +348,16 @@ template {
   font-style: normal;
 }
 @font-face {
-  font-family: 'Gilroy';
-  src: url('../../build/fonts/DINPro/Gilroy-SemiBold.eot');
-  src: local('Gilroy SemiBold'), local('Gilroy-SemiBold'), url('../../build/fonts/DINPro/Gilroy-SemiBold.woff') format('woff'), url('../../build/fonts/DINPro/Gilroy-SemiBold.ttf') format('truetype');
-  font-weight: 600;
+  font-family: 'Gilroy Semibold';
+  src: url('../../build/fonts/Gilroy/Gilroy-SemiBold.eot'), url('../../build/fonts/Gilroy/Gilroy-SemiBold.woff') format('woff'), url('../../build/fonts/Gilroy/Gilroy-SemiBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy Extra Bold';
+  src: url('../../build/fonts/Gilroy/Gilroy-ExtraBold.eot');
+  src: url('../../build/fonts/Gilroy/Gilroy-ExtraBold.woff') format('woff'), url('../../build/fonts/Gilroy/Gilroy-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
   font-style: normal;
 }
 /* variables */
@@ -382,7 +388,7 @@ body {
 }
 .header__container {
   width: 100%;
-  margin-top: 165px;
+  margin-top: 166px;
   margin-bottom: 142px;
 }
 .header__title {
@@ -396,73 +402,61 @@ body {
 .header__description {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
   margin-top: 24px;
 }
 .header__description--marked {
   color: #f47821;
+  letter-spacing: -0.03em;
 }
 .header__btn {
   font-family: 'Gilroy', sans-serif;
   position: relative;
+  color: #222222;
+  font-family: 'Gilroy Extra Bold', sans-serif;
   font-weight: 900;
   font-size: 16px;
+  font-style: normal;
+  line-height: normal;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  margin-top: 48px;
+  margin-top: 21px;
+  margin-left: 8px;
   border: none;
   background: none;
   outline: none;
-  cursor: pointer;
+  text-decoration: none;
   z-index: 1;
 }
 .header__btn .btn__plus {
-  position: absolute;
-  display: block;
+  display: inline-block;
   width: 54px;
   height: 54px;
-  top: -17.5px;
-  left: -38px;
   background-color: #f9f9f9;
-  margin-bottom: 5px;
-  border-radius: 50%;
+  border-radius: 27.5px;
+  margin-right: -12px;
+  margin-bottom: -21px;
   z-index: -1;
+  -webkit-transition: all 0.25s ease-in-out 0.1s;
+  transition: all 0.25s ease-in-out 0.1s;
 }
 .header__btn .btn__plus::before {
-  position: absolute;
-  content: '';
-  display: block;
-  width: 3px;
-  height: 14px;
-  top: 50%;
-  left: 50%;
-  background-color: #f47821;
-  -webkit-transform: translate(-1px, -6.5px);
-  transform: translate(-1px, -6.5px);
-}
-.header__btn .btn__plus::after {
-  position: absolute;
-  content: '';
-  display: block;
   width: 14px;
-  height: 3px;
-  top: 50%;
-  left: 50%;
-  background-color: #f47821;
-  -webkit-transform: translate(-6.5px, -1px);
-  transform: translate(-6.5px, -1px);
+  height: 14px;
+  display: block;
+  content: '';
+  background-image: url('../../build/img/plus.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  -webkit-transform: translate(20px, 20px);
+  transform: translate(20px, 20px);
 }
-.header__btn .btn__plus:hover {
-  display: inline-block;
+.header__btn:hover .btn__plus {
   width: 236px;
-  border-radius: 17.5px;
-}
-.header btn__plus {
-  display: inline-block;
-  width: 54px;
-  height: 54px;
-  background-color: #f9f9f9;
-  border-radius: 50%;
-  z-index: -1;
+  background-position: 16px 50%;
+  border-radius: 27.5px;
+  margin-right: -194px;
 }
 .content {
   max-width: 100%;
