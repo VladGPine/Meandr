@@ -2,9 +2,9 @@ const gulp = require('gulp'),
       less = require('gulp-less'),
       autoprefixer = require('gulp-autoprefixer'),
       rename = require('gulp-rename'),
-      cleanCSS = require('gulp-clean-css'),
       browserSync = require('browser-sync').create(),
-      concat = require('gulp-concat');
+      concat = require('gulp-concat'),
+      cssnano = require('gulp-cssnano');
 
 const styles = (done) => {
   gulp.src('./src/less/**/index.less')
@@ -14,14 +14,19 @@ const styles = (done) => {
       cascade: false
     }))
     .pipe(rename('styles.css'))
+    .pipe(cssnano())
     .pipe(gulp.dest('./build/css'))
     .pipe(browserSync.stream());
-    done();
+  done();
 }
 
 
-const scripts = () => {
-
+const scripts = (done) => {
+  gulp.src('./src/js/**/*.js')
+    .pipe(concat('index.js'))
+    .pipe(gulp.dest('./build/js'))
+    .pipe(browserSync.stream());
+  done();
 }
 
 
@@ -32,6 +37,7 @@ const watch = (done) => {
     }
   });
   gulp.watch('./src/less/**/*.less', gulp.parallel(styles));
+  gulp.watch('./src/js/**/*.js', gulp.parallel(scripts));
   gulp.watch("./*.html").on('change', browserSync.reload);
   done();
 }
