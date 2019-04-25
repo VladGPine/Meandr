@@ -17,8 +17,9 @@
       font-weight: normal;
       line-height: 52px;
       letter-spacing: -0.02em;
-      margin-top: 100px;
-      margin-bottom: 82px;
+      margin-top: 98px;
+      margin-left: 2px;
+      margin-bottom: 85px;
     }
 
     &__label-description {
@@ -26,18 +27,31 @@
       max-width: 575px;
       display: flex;
       flex-direction: column;
+      font-family: 'DIN Pro_1';
       font-size: 16px;
-      letter-spacing: -0.01em;
+      margin-left: 3px;
+      margin-bottom: 11px;
 
       &::before {
         position: absolute;
-        left: -54px;
+        top: -2px;
+        left: -66px;
         color: @orange;
         font-family: 'Roboto', sans-serif;
         font-size: 20px;
         font-style: normal;
         font-weight: 500;
-        
+      }
+
+      &:after {
+        position: absolute;
+        content: '';
+        width: 64px;
+        height: 64px;
+        top: -24px;
+        left: -94px;
+        border: 1px solid @form-pseudo-color;
+        border-radius: 50%;
       }
 
       &--name::before {
@@ -52,20 +66,24 @@
         content: '3';
       }
 
-      &--question::before {
-        content: '4';
+      &--question {
+        letter-spacing: 0.005em;
+        line-height: 1.57em;
+        margin-left: 1px;
+        margin-top: -3px;
+
+        &::before {
+          content: '4';
+          top: -1px;
+        }
+
+        &::after {
+          top: -21px;
+          left: -93px;
+        }
       }
 
-      &:after {
-        position: absolute;
-        content: '';
-        width: 64px;
-        height: 64px;
-        top: -21px;
-        left: -81px;
-        border: 1px solid @form-pseudo-color;
-        border-radius: 50%;
-      }
+    
     }
 
     &__input {
@@ -74,14 +92,14 @@
       font-family: 'Roboto', sans-serif;
       font-size: 24px;
       font-style: normal;
-      font-weight: 500;
+      font-weight: normal;
       margin-bottom: 60px;
       background: none;
       border: none;
-      border-bottom: 1px solid @form-placeholder-color;
+      border-bottom: 2px solid @form-placeholder-color;
       margin-top: 24px;
       padding-top: 5px;
-      padding-bottom: 12px;
+      padding-bottom: 21px;
       outline: none;
 
       .placeholder({
@@ -94,13 +112,25 @@
     }
 
     &__textarea {
-      padding-bottom: 42px;
+      padding-top: inherit;
+      padding-left: 1px;
+      padding-bottom: 30px;
+      margin-bottom: 0;
       resize: none;
+
+      .placeholder({
+        font-size: 24px;
+        line-height: 34px;
+        letter-spacing: -0.01em;
+        color: @main-bg-color;
+        opacity: 0.3;
+      })
     }
     
     &__btn {
       .btn;
       width: 575px;
+      font-family: 'Gilroy Extra Bold', sans-serif;
       font-size: 14px;
       font-weight: bold;
       line-height: normal;
@@ -110,10 +140,11 @@
       background-color: @main-bg-color;
       border: none;
       border-radius: 27.5px;
-      margin-top: 60px;
+      margin-top: 50px;
+      // margin-left: -1px;
       margin-bottom: 120px;
-      padding-top: 20px;
-      padding-bottom: 16px;
+      padding-top: 19px;
+      padding-bottom: 17px;
       outline: none;
     }
   }

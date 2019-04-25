@@ -341,6 +341,13 @@ template {
   font-style: normal;
 }
 @font-face {
+  font-family: 'DIN Pro_1';
+  src: url('../../build/fonts/DINPro/DINPro_1.eot');
+  src: url('../../build/fonts/DINPro/DINPro_1.woff2') format('woff2'), url('../../build/fonts/DINPro/DINPro_1.woff') format('woff'), url('../../build/fonts/DINPro/DINPro_1.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: 'DIN Pro Bold';
   src: url('../../build/fonts/DINPro/DINPro-Bold.eot');
   src: url('../../build/fonts/DINPro/DINPro-Bold.woff') format('woff'), url('../../build/fonts/DINPro/DINPro-Bold.ttf') format('truetype');
@@ -702,8 +709,9 @@ body {
   font-weight: normal;
   line-height: 52px;
   letter-spacing: -0.02em;
-  margin-top: 100px;
-  margin-bottom: 82px;
+  margin-top: 98px;
+  margin-left: 2px;
+  margin-bottom: 85px;
 }
 .footer .feedback-form__label-description {
   position: relative;
@@ -715,17 +723,30 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  font-family: 'DIN Pro_1';
   font-size: 16px;
-  letter-spacing: -0.01em;
+  margin-left: 3px;
+  margin-bottom: 11px;
 }
 .footer .feedback-form__label-description::before {
   position: absolute;
-  left: -54px;
+  top: -2px;
+  left: -66px;
   color: #f47821;
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
+}
+.footer .feedback-form__label-description:after {
+  position: absolute;
+  content: '';
+  width: 64px;
+  height: 64px;
+  top: -24px;
+  left: -94px;
+  border: 1px solid rgba(255, 255, 255, 0.23);
+  border-radius: 50%;
 }
 .footer .feedback-form__label-description--name::before {
   content: '1';
@@ -736,18 +757,19 @@ body {
 .footer .feedback-form__label-description--tel::before {
   content: '3';
 }
+.footer .feedback-form__label-description--question {
+  letter-spacing: 0.005em;
+  line-height: 1.57em;
+  margin-left: 1px;
+  margin-top: -3px;
+}
 .footer .feedback-form__label-description--question::before {
   content: '4';
+  top: -1px;
 }
-.footer .feedback-form__label-description:after {
-  position: absolute;
-  content: '';
-  width: 64px;
-  height: 64px;
+.footer .feedback-form__label-description--question::after {
   top: -21px;
-  left: -81px;
-  border: 1px solid rgba(255, 255, 255, 0.23);
-  border-radius: 50%;
+  left: -93px;
 }
 .footer .feedback-form__input {
   width: 575px;
@@ -755,14 +777,14 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 24px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: normal;
   margin-bottom: 60px;
   background: none;
   border: none;
-  border-bottom: 1px solid rgba(247, 248, 250, 0.1);
+  border-bottom: 2px solid rgba(247, 248, 250, 0.1);
   margin-top: 24px;
   padding-top: 5px;
-  padding-bottom: 12px;
+  padding-bottom: 21px;
   outline: none;
 }
 .footer .feedback-form__input::-webkit-input-placeholder {
@@ -794,12 +816,44 @@ body {
   opacity: 0.3;
 }
 .footer .feedback-form__textarea {
-  padding-bottom: 42px;
+  padding-top: inherit;
+  padding-left: 1px;
+  padding-bottom: 30px;
+  margin-bottom: 0;
   resize: none;
+}
+.footer .feedback-form__textarea::-webkit-input-placeholder {
+  font-size: 24px;
+  line-height: 34px;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+  opacity: 0.3;
+}
+.footer .feedback-form__textarea:-moz-placeholder {
+  font-size: 24px;
+  line-height: 34px;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+  opacity: 0.3;
+}
+.footer .feedback-form__textarea::-moz-placeholder {
+  font-size: 24px;
+  line-height: 34px;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+  opacity: 0.3;
+}
+.footer .feedback-form__textarea:-ms-input-placeholder {
+  font-size: 24px;
+  line-height: 34px;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+  opacity: 0.3;
 }
 .footer .feedback-form__btn {
   font-family: 'Gilroy', sans-serif;
   width: 575px;
+  font-family: 'Gilroy Extra Bold', sans-serif;
   font-size: 14px;
   font-weight: bold;
   line-height: normal;
@@ -809,9 +863,9 @@ body {
   background-color: #ffffff;
   border: none;
   border-radius: 27.5px;
-  margin-top: 60px;
+  margin-top: 50px;
   margin-bottom: 120px;
-  padding-top: 20px;
-  padding-bottom: 16px;
+  padding-top: 19px;
+  padding-bottom: 17px;
   outline: none;
 }
