@@ -4,7 +4,8 @@ const gulp = require('gulp'),
       rename = require('gulp-rename'),
       browserSync = require('browser-sync').create(),
       concat = require('gulp-concat'),
-      cssnano = require('gulp-cssnano');
+      cssnano = require('gulp-cssnano'),
+      babel = require('gulp-babel');
 
 const styles = (done) => {
   gulp.src('./src/less/**/index.less')
@@ -23,6 +24,9 @@ const styles = (done) => {
 
 const scripts = (done) => {
   gulp.src('./src/js/**/*.js')
+    .pipe(babel({
+      presets: ['@babel/env']
+    }))
     .pipe(concat('index.js'))
     .pipe(gulp.dest('./build/js'))
     .pipe(browserSync.stream());

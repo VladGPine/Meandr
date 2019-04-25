@@ -1,2 +1,7 @@
-const print = () => console.log('1');
+"use strict";
+
+var print = function print() {
+  return console.log('1');
+};
+
 print();
