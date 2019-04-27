@@ -5,7 +5,8 @@ const gulp = require('gulp'),
       browserSync = require('browser-sync').create(),
       concat = require('gulp-concat'),
       cssnano = require('gulp-cssnano'),
-      babel = require('gulp-babel');
+      babel = require('gulp-babel'),
+      strip = require('gulp-strip-comments');
 
 const styles = (done) => {
   gulp.src('./src/less/**/index.less')
@@ -28,6 +29,7 @@ const scripts = (done) => {
       presets: ['@babel/env']
     }))
     .pipe(concat('index.js'))
+    .pipe(strip())
     .pipe(gulp.dest('./build/js'))
     .pipe(browserSync.stream());
   done();

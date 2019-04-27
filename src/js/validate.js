@@ -50,7 +50,6 @@
             checkInputs(textarea, textareaPattern, 'Пожалуйста, напишите о себе')
           }
       })
-
     } else {
       applicationForm.submit()
     }

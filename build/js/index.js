@@ -1,14 +1,14 @@
 "use strict";
 
 {
-  var applicationForm = document.forms.application; // Создаем ошибку
+  var applicationForm = document.forms.application; 
 
   var createError = function createError(text) {
     var error = document.createElement("div");
     error.className = "text-error";
     error.textContent = text;
     return error;
-  }; // Сбрасываем текст ошибки, чтобы он не дублировался
+  }; 
 
 
   var clearErrors = function clearErrors() {
@@ -16,15 +16,14 @@
     errors.forEach(function (error) {
       error.remove();
     });
-  }; // Валидируем все поля по регуляркам и для каждого поля с проваленной валидацией, очищаем его
+  }; 
 
 
   var checkInputs = function checkInputs(input, pattern, text) {
     if (!input.value.match(pattern)) {
-      // <--Валидируем
       var error = createError(text);
       input.parentNode.appendChild(error);
-      input.value = ''; // <--Очищаем
+      input.value = ''; 
     }
   };
 
