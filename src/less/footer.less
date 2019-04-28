@@ -1,10 +1,10 @@
 .footer {
-  // max-width: 100%;
-  max-width: 1440px;
+  width: 100%;
+  // max-width: 1440px;
   margin: 0 auto;
   
   .feedback-form {
-    max-width: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,6 +24,7 @@
 
     &__label-description {
       position: relative;
+      width: 100%;
       max-width: 575px;
       display: flex;
       flex-direction: column;
@@ -96,7 +97,8 @@
     }
 
     &__input {
-      width: 575px;
+      width: 100%;
+      max-width: 575px;
       color: @main-bg-color;
       font-family: 'Roboto', sans-serif;
       font-size: 24px;
@@ -142,7 +144,8 @@
     
     &__btn {
       .btn;
-      width: 575px;
+      width: 100%;
+      max-width: 575px;
       font-family: 'Gilroy Extra Bold', sans-serif;
       font-size: 14px;
       font-weight: bold;

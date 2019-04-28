@@ -5,26 +5,39 @@
   align-items: center;
 
   .block-1 {
-    max-width: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
     background-color: @second-bg-color;
+
+    @media @mobile {
+      justify-content: flex-start;
+    }
     
     &__image {
-      max-width: 100%;  
+      width: 100%;  
     }
 
     &__description {
       display: flex;
       flex-wrap: wrap;
       max-width: 972px;
+      width: 100%;
       margin-top: -99px;
       margin-bottom: 80px;
 
+      @media @mobile {
+        width: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
       .question {
-        width: 486px;
+        max-width: 486px;
+        width: 100%;
         font-family: 'DIN Pro', sans-serif;
         background-color: @main-bg-color;
         padding: 50px 66px 39px 58px;
@@ -81,12 +94,26 @@
             width: 300px;
           }
         }
+
+        // убрать в закомментированном или удалить его.
+
+        // @media @mobile {
+        //   width: 100%;
+        //   border-right: none;
+        //   border-left: none;
+        //   margin: 0;
+        //   padding: 0;
+
+        //   &:not(:last-child) {
+        //     border-bottom: 2px solid @btn-bg-color;
+        //   }
+        // }
       }
     }
   }
 
   .block-2 {
-    max-width: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
   }
@@ -96,6 +123,10 @@
     margin-top: 43px;
     margin-bottom: 89px;
     color: @main-text-color;
+    
+    @media @mobile {
+      width: 100%;
+    }
 
     &__title {
       font-family: 'DIN Pro', sans-serif;
@@ -104,6 +135,10 @@
       letter-spacing: -0.02em;
       margin-bottom: 9px;
       margin-left: 1px;
+
+      @media @mobile {
+        font-size: 36px;
+      }
     }
 
     &__description {
@@ -122,12 +157,11 @@
         line-height: 1.65;
       }
     }
-    
   }
 
   .block-3 {
     width: 100%;
-    max-width: 1440px;
+    // max-width: 1440px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -158,6 +192,11 @@
       margin-bottom: 148px;
       padding: 0;
 
+      @media @mobile {
+        width: 100%;
+        margin-left: 0;
+      }
+
       .benefit {
         display: flex;
         flex-direction: column;
@@ -167,7 +206,7 @@
        
         &--experience {
           width: 326px;
-          margin-right: 71px;
+          margin-right: 70px;
         }
 
         &--salary {
@@ -177,6 +216,12 @@
 
         &--flexible {
           width: 345px;
+        }
+
+        @media @mobile {
+          width: 320px;
+          margin-left: 0;
+          margin-right: 0;
         }
 
         &__title {
