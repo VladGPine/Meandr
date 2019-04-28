@@ -45,7 +45,7 @@
 
         if (!input.value) {
           checkInputs(name, namePattern, 'Укажите, пожалуйста, фамилию и имя');
-          checkInputs(email, emailPattern, 'Укажите, пожалуйста, фамилию и имя');
+          checkInputs(email, emailPattern, 'Укажите, пожалуйста, email');
           checkInputs(tel, telPattern, 'Укажите, пожалуйста, номер телефона');
           checkInputs(textarea, textareaPattern, 'Пожалуйста, напишите о себе');
         }
