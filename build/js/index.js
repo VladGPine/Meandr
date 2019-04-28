@@ -36,7 +36,7 @@
         namePattern = /^[a-zа-яё]+\s[a-zа-яё]+$/i,
         emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
         telPattern = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/,
-        textareaPattern = /[а-яё\d]+(\s+[а-яё\d]+)?/;
+        textareaPattern = /^[а-яё\d]+$/gim;
 
     if (!name.value.match(namePattern) || !email.value.toLowerCase().match(emailPattern) || !tel.value.match(telPattern) || !textarea.value.match(textareaPattern)) {
       evt.preventDefault();
@@ -50,8 +50,6 @@
           checkInputs(textarea, textareaPattern, 'Пожалуйста, напишите о себе');
         }
       });
-    } else {
-      applicationForm.submit();
     }
   };
 
