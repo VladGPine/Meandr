@@ -31,7 +31,6 @@
           email = applicationForm.elements.email,
           tel = applicationForm.elements.tel,
           textarea = applicationForm.elements.textarea,
-          inputs = applicationForm.querySelectorAll('.feedback-form__input'),
           namePattern = /^[a-zа-яё]+\s[a-zа-яё]+$/i,
           emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
           telPattern = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/,
