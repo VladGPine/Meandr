@@ -34,7 +34,7 @@
           namePattern = /^[a-zа-яё]+\s[a-zа-яё]+$/i,
           emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
           telPattern = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/,
-          textareaPattern = /^[а-яё\s,\-:;()\\\/\d"@№#%&*=+<>|`~'?!]+([.]{1,3})?$/gim;
+          textareaPattern = /^[а-яё\w\s,\-:;.()\\\/\d"@№#%&*=+<>|`~'?!]+$/gim;
 
     if (!name.value.match(namePattern) || !email.value.toLowerCase().match(emailPattern) || !tel.value.match(telPattern) || !textarea.value.match(textareaPattern)) {
       evt.preventDefault();
