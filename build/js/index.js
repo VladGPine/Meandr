@@ -36,20 +36,15 @@
         namePattern = /^[a-zа-яё]+\s[a-zа-яё]+$/i,
         emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
         telPattern = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/,
-        textareaPattern = /^[а-яё\d]+$/gim;
+        textareaPattern = /^[а-яё\d\s]+$/gim;
 
     if (!name.value.match(namePattern) || !email.value.toLowerCase().match(emailPattern) || !tel.value.match(telPattern) || !textarea.value.match(textareaPattern)) {
       evt.preventDefault();
-      inputs.forEach(function (input) {
-        clearErrors();
-
-        if (!input.value) {
-          checkInputs(name, namePattern, 'Укажите, пожалуйста, фамилию и имя');
-          checkInputs(email, emailPattern, 'Укажите, пожалуйста, email');
-          checkInputs(tel, telPattern, 'Укажите, пожалуйста, номер телефона');
-          checkInputs(textarea, textareaPattern, 'Пожалуйста, напишите о себе');
-        }
-      });
+      clearErrors();
+      checkInputs(name, namePattern, 'Укажите, пожалуйста, фамилию и имя');
+      checkInputs(email, emailPattern, 'Укажите, пожалуйста, email');
+      checkInputs(tel, telPattern, 'Укажите, пожалуйста, номер телефона');
+      checkInputs(textarea, textareaPattern, 'Пожалуйста, напишите о себе');
     }
   };
 
