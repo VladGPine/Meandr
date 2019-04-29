@@ -16,7 +16,7 @@
     }
     
     &__image {
-      width: 100%;  
+      width: 100%;
     }
 
     &__description {
@@ -32,7 +32,7 @@
         flex-direction: column;
         justify-content: flex-start;
         margin-top: 0;
-        margin-bottom: 0;
+        margin-bottom: 40px;
       }
 
       .question {
@@ -44,8 +44,18 @@
         border-right: 2px solid @btn-bg-color;
         box-sizing: border-box;
 
+        @media @mobile {
+          padding: 0;
+          background-color: @second-bg-color;
+          border-right: none;
+        }
+
         &:not(:nth-child(2n+2)) {
           border-left: 2px solid @btn-bg-color;
+
+          @media @mobile {
+            border-left: none;
+          }
         }
 
         &:not(:nth-child(3)),
@@ -64,6 +74,13 @@
           margin-top: 0;
           margin-bottom: 18px;
 
+          @media @mobile {
+            font-size: 16px;
+            text-align: center;
+            margin-top: 20px;
+            background-color: @second-bg-color;
+          }
+
           &:nth-child(2) {
             letter-spacing: 0.03em;
           }
@@ -76,38 +93,44 @@
           letter-spacing: -0.03em;
           color: @main-text-color;
           margin-top: 0;
-          
+
+          @media @mobile {
+            width: 100%;
+            text-align: center;
+          }
         }
 
         &:nth-child(2) {
           padding-left: 60px;
 
+          @media @mobile {
+            padding: 0;
+          }
+
           .question__description {
             width: 356px;
+
+            @media @mobile {
+              width: 100%;
+            }
           }
         }
 
         &:last-child {
           padding-left: 60px;
 
+          @media @mobile {
+            padding: 0;
+          }
+
           .question__description {
             width: 300px;
+
+            @media @mobile {
+              width: 100%;
+            }
           }
         }
-
-        // убрать в закомментированном или удалить его.
-
-        // @media @mobile {
-        //   width: 100%;
-        //   border-right: none;
-        //   border-left: none;
-        //   margin: 0;
-        //   padding: 0;
-
-        //   &:not(:last-child) {
-        //     border-bottom: 2px solid @btn-bg-color;
-        //   }
-        // }
       }
     }
   }
@@ -120,12 +143,16 @@
 
   .article {
     width: 773px;
+    display: flex;
+    flex-direction: column;
     margin-top: 43px;
     margin-bottom: 89px;
     color: @main-text-color;
     
     @media @mobile {
       width: 100%;
+      margin-top: 40px;
+      margin-bottom: 40px;
     }
 
     &__title {
@@ -138,6 +165,9 @@
 
       @media @mobile {
         font-size: 36px;
+        margin-top: 0;
+        margin-left: 0;
+        text-align: center;
       }
     }
 
@@ -146,6 +176,12 @@
       font-size: 16px;
       color: @article-color;
       margin-left: 1px;
+
+      @media @mobile {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+      }
       
       &:first-of-type {
         margin-bottom: 28px;
@@ -179,6 +215,14 @@
       margin-top: 121px;
       margin-left: 1px;
       margin-bottom: 60px;
+
+      @media @mobile {
+        width: 100%;
+        text-align: center;
+        margin-top: 40px;
+        margin-left: 0;
+        margin-bottom: 30px;
+      }
     }
 
     .benefit-list {
@@ -194,15 +238,22 @@
 
       @media @mobile {
         width: 100%;
+        text-align: center;
         margin-left: 0;
+        margin-bottom: 40px;
       }
 
       .benefit {
         display: flex;
         flex-direction: column;
+        align-items: center;
         background-image: url('../../build/img/benefit.png');
         background-repeat: no-repeat;
         background-position: 0 0;
+
+        @media @mobile {
+          background-position: 50% 10px;
+        }
        
         &--experience {
           width: 326px;
@@ -219,7 +270,7 @@
         }
 
         @media @mobile {
-          width: 320px;
+          width: 100%;
           margin-left: 0;
           margin-right: 0;
         }
@@ -229,13 +280,25 @@
           font-size: 20px;
           margin-top: 84px;
           margin-left: 1px;
+
+          @media @mobile {
+            width: 100%;
+            margin-left: 0;
+          }
         }
 
         &__line {
           margin-top: 4px;
           margin-left: 1px;
           margin-bottom: 8px;
+
+          @media @mobile {
+            margin: 0;
+            border-left: none;
+            border-right: none;
+          }
         }
+
         &__description {
           overflow: visible;
           font-family: 'Roboto', sans-serif;
@@ -243,6 +306,11 @@
           line-height: 1.68em;
           color: @article-color;
           margin-left: 1px;
+
+          @media @mobile {
+            width: 100%;
+            margin-left: 0;
+          }
         }
       }
     }
