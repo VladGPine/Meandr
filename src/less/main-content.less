@@ -35,6 +35,14 @@
         margin-bottom: 40px;
       }
 
+      @media @tablet-s {
+        width: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 0;
+        margin-bottom: 40px;
+      }
+
       .question {
         max-width: 486px;
         width: 100%;
@@ -50,10 +58,20 @@
           border-right: none;
         }
 
+        @media @tablet-s {
+          padding: 0;
+          background-color: @second-bg-color;
+          border-right: none;
+        }
+
         &:not(:nth-child(2n+2)) {
           border-left: 2px solid @btn-bg-color;
 
           @media @mobile {
+            border-left: none;
+          }
+
+          @media @tablet-s {
             border-left: none;
           }
         }
@@ -81,6 +99,13 @@
             background-color: @second-bg-color;
           }
 
+          @media @tablet-s {
+            font-size: 16px;
+            text-align: center;
+            margin-top: 20px;
+            background-color: @second-bg-color;
+          }
+
           &:nth-child(2) {
             letter-spacing: 0.03em;
           }
@@ -98,6 +123,11 @@
             width: 100%;
             text-align: center;
           }
+
+          @media @tablet-s {
+            width: 100%;
+            text-align: center;
+          }
         }
 
         &:nth-child(2) {
@@ -107,10 +137,18 @@
             padding: 0;
           }
 
+          @media @tablet-s {
+            padding: 0;
+          }
+
           .question__description {
             width: 356px;
 
             @media @mobile {
+              width: 100%;
+            }
+
+            @media @tablet-s {
               width: 100%;
             }
           }
@@ -123,10 +161,18 @@
             padding: 0;
           }
 
+          @media @tablet-s {
+            padding: 0;
+          }
+
           .question__description {
             width: 300px;
 
             @media @mobile {
+              width: 100%;
+            }
+
+            @media @tablet-s {
               width: 100%;
             }
           }
@@ -155,6 +201,12 @@
       margin-bottom: 40px;
     }
 
+    @media @tablet-s {
+      width: 100%;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
     &__title {
       font-family: 'DIN Pro', sans-serif;
       font-size: 48px;
@@ -169,6 +221,13 @@
         margin-left: 0;
         text-align: center;
       }
+
+      @media @tablet-s {
+        font-size: 36px;
+        margin-top: 0;
+        margin-left: 0;
+        text-align: center;
+      }
     }
 
     &__description {
@@ -178,6 +237,12 @@
       margin-left: 1px;
 
       @media @mobile {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+      }
+
+      @media @tablet-s {
         width: 100%;
         margin-left: 0;
         text-align: center;
@@ -197,7 +262,6 @@
 
   .block-3 {
     width: 100%;
-    // max-width: 1440px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -217,6 +281,14 @@
       margin-bottom: 60px;
 
       @media @mobile {
+        width: 100%;
+        text-align: center;
+        margin-top: 40px;
+        margin-left: 0;
+        margin-bottom: 30px;
+      }
+
+      @media @tablet-s {
         width: 100%;
         text-align: center;
         margin-top: 40px;
@@ -243,6 +315,13 @@
         margin-bottom: 40px;
       }
 
+      @media @tablet-s {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+        margin-bottom: 40px;
+      }
+
       .benefit {
         display: flex;
         flex-direction: column;
@@ -252,6 +331,10 @@
         background-position: 0 0;
 
         @media @mobile {
+          background-position: 50% 10px;
+        }
+
+        @media @tablet-s {
           background-position: 50% 10px;
         }
        
@@ -275,6 +358,12 @@
           margin-right: 0;
         }
 
+        @media @tablet-s {
+          width: 100%;
+          margin-left: 0;
+          margin-right: 0;
+        }
+
         &__title {
           font-family: 'DIN Pro Bold', sans-serif;
           font-size: 20px;
@@ -282,6 +371,11 @@
           margin-left: 1px;
 
           @media @mobile {
+            width: 100%;
+            margin-left: 0;
+          }
+
+          @media @tablet-s {
             width: 100%;
             margin-left: 0;
           }
@@ -293,6 +387,14 @@
           margin-bottom: 8px;
 
           @media @mobile {
+            width: 100px;
+            margin: 0;
+            border-left: none;
+            border-right: none;
+          }
+
+          @media @tablet-s {
+            width: 150px;
             margin: 0;
             border-left: none;
             border-right: none;
@@ -308,6 +410,11 @@
           margin-left: 1px;
 
           @media @mobile {
+            width: 100%;
+            margin-left: 0;
+          }
+
+          @media @tablet-s {
             width: 100%;
             margin-left: 0;
           }

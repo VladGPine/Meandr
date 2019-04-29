@@ -25,7 +25,15 @@
         width: 100%;
         margin-top: 30px;
         margin-left: 0;
-        margin-bottom: 90px;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+
+      @media @tablet-s {
+        width: 100%;
+        margin-top: 30px;
+        margin-left: 0;
+        margin-bottom: 40px;
         text-align: center;
       }
     }
@@ -47,6 +55,11 @@
         text-align: center;
       }
 
+      @media @tablet-s {
+        width: 320px;
+        margin: 0 0 0 65px;
+      }
+
       .text-error {
         position: absolute;
         top: 20px;
@@ -55,6 +68,10 @@
         @media @mobile {
           width: 100%;
           text-align: center;
+        }
+
+        @media @tablet-s {
+          width: 100%;
         }
       }
 
@@ -67,12 +84,6 @@
         font-size: 20px;
         font-style: normal;
         font-weight: 500;
-        
-        @media @mobile {
-          display: block;
-          top: -58px;
-          left: 154px;
-        }
       }
 
       &:after {
@@ -84,11 +95,6 @@
         left: -94px;
         border: 1px solid @form-pseudo-color;
         border-radius: 50%;
-
-        @media @mobile {
-          top: -80px;
-          left: 127px;
-        }
       }
 
       &--name::before {
@@ -109,6 +115,11 @@
         margin-left: 1px;
         margin-top: -3px;
 
+        @media @tablet-s {
+          width: 320px;
+          margin: 0 0 0 65px;
+        }
+
         .text-error {
           top: 46px;
 
@@ -121,23 +132,11 @@
           content: '4';
           top: -1px;
           left: -65px;
-
-          @media @mobile {
-            display: block;
-            top: -58px;
-            left: 154px;
-          }
         }
 
         &::after {
           top: -21px;
           left: -93px;
-
-          @media @mobile {
-            display: block;
-            top: -80px;
-            left: 127px;
-          }
         }
       }
     }
@@ -161,9 +160,18 @@
 
       @media @mobile {
         width: 100%;
-        margin-bottom: 100px;
+        margin-bottom: 40px;
         padding-bottom: 10px;
+        margin-left: 0;
         text-align: center;
+      }
+
+      @media @tablet-s {
+        width: 320px;
+        margin-bottom: 40px;
+        padding-bottom: 10px;
+        margin-left: 0;
+        // text-align: center;
       }
 
       &:focus {
@@ -187,6 +195,12 @@
       resize: none;
 
       @media @mobile {
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 56px;
+      }
+
+      @media @tablet-s {
         padding-left: 0;
         padding-right: 0;
         padding-bottom: 56px;
@@ -225,7 +239,10 @@
       @media @mobile {
         width: 236px;
         margin-bottom: 40px;
-        
+      }
+
+      @media @tablet-s {
+        max-width: 400px;
       }
     }
   }
