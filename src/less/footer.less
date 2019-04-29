@@ -31,7 +31,7 @@
 
       @media @tablet-s {
         width: 100%;
-        margin-top: 30px;
+        margin-top: 40px;
         margin-left: 0;
         margin-bottom: 40px;
         text-align: center;
@@ -124,6 +124,14 @@
           top: 46px;
 
           @media @mobile {
+            top: 72px;
+          }
+
+          @media (min-width: 408px) and (max-width: 480px) {
+            top: 48px;
+          }
+
+          @media @tablet-s {
             top: 72px;
           }
         }
@@ -242,7 +250,8 @@
       }
 
       @media @tablet-s {
-        max-width: 400px;
+        max-width: 260px;
+        margin-bottom: 40px;
       }
     }
   }
