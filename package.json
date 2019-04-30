@@ -22,7 +22,8 @@
     "gulp-rename": "^1.4.0",
     "gulp-strip-comments": "^2.5.2",
     "gulp-watch": "^5.0.1",
-    "normalize.less": "^1.0.0"
+    "normalize.less": "^1.0.0",
+    "wow.js": "^1.2.2"
   },
   "browserslist": [
     "last 2 version"
