@@ -116,7 +116,9 @@
   <script src="build/js/index.js"></script>
   <script src="build/js/wow.js"></script>
   <script>
-    new WOW().init();
+    const wow = new WOW({
+      mobile: false
+    }).init();
   </script>
 </body>
 </html>
