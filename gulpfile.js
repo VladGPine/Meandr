@@ -42,8 +42,8 @@ const watch = (done) => {
         baseDir: "./"
     }
   });
-  gulp.watch('./src/less/**/*.less', gulp.series(styles));
-  gulp.watch('./src/js/**/*.js', gulp.series(scripts));
+  gulp.watch('./src/less/**/*.less', gulp.parallel(styles));
+  gulp.watch('./src/js/**/*.js', gulp.parallel(scripts));
   gulp.watch("./*.html").on('change', browserSync.reload);
   done();
 }
@@ -53,6 +53,6 @@ gulp.task('scripts', scripts);
 gulp.task('watch', watch);
 
 gulp.task('default', gulp.series(
-  gulp.series('styles', 'scripts'),
+  gulp.parallel('styles', 'scripts'),
   gulp.parallel('watch')
 ));
